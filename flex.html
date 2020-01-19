@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>弹性盒子布局</title>
+    <style type="text/css">
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+      }
+      .box1 {
+        width: 100%;
+        height: 100%;
+        background-color: indigo;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+      }
+      .box2 {
+        height: 30%;
+        width: 30%;
+        /* flex-basis: 30%; */
+        flex-grow: 1; /* 分配剩余空间，默认值为0(原大小)，无多余宽度时，flex-gorw无效*/
+        flex-shrink: 0; /* 缩小模块，默认为1(所有模块等比例缩小)，设置为0模块保持原大小,无多余宽度时，flex-shrink无效*/
+        flex-basis: 40%; /*flex-basis优先级大于width,felx-basis值为0，模块的大小根据内容决定，值为auto,如果设置了width，宽度由width决定，如果没有设置width，由模块内容决定*/
+        background-color: lightpink;
+      }
+      .box3 {
+        height: 30%;
+        /* flex-basis: 30%; */
+        width: 30%;
+        flex-grow: 1;
+        background-color: rgb(13, 13, 17);
+      }
+      .box4 {
+        height: 30%;
+        width: 30%;
+        /* flex-basis: 50%; */
+        flex-grow: 1;
+        background-color: rgb(233, 233, 243);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">
+      <div class="box2"></div>
+      <div class="box3"></div>
+      <div class="box4"></div>
+    </div>
+  </body>
+</html>
