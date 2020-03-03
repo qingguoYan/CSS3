@@ -54,8 +54,8 @@ body {
 }
 
 .btn:hover::before {
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
+  width: calc(100% + 5px);
+  height: calc(100% + 5px);
 }
 
 .btn:hover::after {
